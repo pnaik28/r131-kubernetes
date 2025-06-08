@@ -4,7 +4,7 @@ metadata:
   name: Cart-app-pod
 spec:
   containers:
-    - name: test container
+    - name: test-container
       image: docker pull pnaik599/rcbimage:v1
       ports:
         - containerPort: 3015
