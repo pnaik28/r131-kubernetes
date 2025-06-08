@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Cart-app-Pod
+spec:
+  containers:
+    - name: test container
+      image: docker pull pnaik599/rcbimage:v1
+      ports:
+        - containerPort: 3015
