@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flower-app-deployment
+spec: # it defines the behaviour of the deployment
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template: # it defines the pod definition
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: flower-container
+        image: docker pull pnaik599/rcbimage:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        requests:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: <Port>
