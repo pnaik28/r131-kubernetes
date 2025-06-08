@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: deployment
 metadata:
   name: flower-app-deployment
 spec: # it defines the behaviour of the deployment
@@ -17,8 +17,8 @@ spec: # it defines the behaviour of the deployment
         image: docker pull pnaik599/rcbimage:v1
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "500Mi"
+            cpu: "300m"
         requests:
             memory: "128Mi"
             cpu: "200m"
